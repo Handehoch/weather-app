@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather</title>
+    <link rel="icon" href="img/cloudy.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p class="additional-info">Use this site to check weather</p>
+
+        <form class="main-form">
+            <label>
+                <input class="location-input" placeholder="Location">
+            </label>
+            <button class="search-button">Search</button>
+        </form>
+
+        <p class="additional-info" id="message-1"></p>
+        <p class="additional-info" id="message-2"></p>
+    </div>
+    <div id="map"></div>
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key={{GOOGLE_API}}&v=weekly"
+            defer
+    ></script>
+    {{>footer}}
+    <script src="js/index.js"></script>
+    <script type="text/javascript" src="config.js"></script>
+</body>
+</html>
